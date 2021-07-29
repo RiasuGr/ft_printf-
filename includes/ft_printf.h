@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: twagner <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/31 08:09:52 by twagner           #+#    #+#             */
-/*   Updated: 2021/05/31 08:09:57 by twagner          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
@@ -38,6 +26,7 @@ typedef union u_params
 	}			s;
 	int		a_params[PSIZE];
 }			t_params;
+
 int		ft_printf(const char *format, ...);
 void	ft_putchar_count_fd(char c, int fd, int *count);
 void	ft_memprint_fd(char *str, int len, int fd, int *count);

@@ -50,7 +50,9 @@ fclean:		clean
 
 re:			fclean all
 
-bonus:		all
+test:
+	make all -C $(LIBFT)/
+	$(CC) -g3 $(SRCS) main2.c -L./libft -l ft
 
 $(LIB):	
 			@cd $(LIBDIR) && make bonus
@@ -58,3 +60,5 @@ $(LIB):
 			@cd $(LIBDIR) && mv $(LIB) ../
 
 .PHONY:		all clean fclean c.o re bonus
+
+
